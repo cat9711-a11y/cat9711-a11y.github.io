@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accounting + Analytics Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website template for an MSc Accounting and Analytics graduate student."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-blur bg-blur-a" aria-hidden="true"></div>
+    <div class="bg-blur bg-blur-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top">
+          <span class="brand-dot"></span>
+          <span class="brand-text">Minji Kim</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <nav id="site-nav" class="site-nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">MSc Accounting and Analytics</p>
+            <h1>
+              I turn financial data into
+              <span>clear decisions</span>.
+            </h1>
+            <p class="hero-text">
+              Graduate student focused on financial reporting, audit analytics, and
+              data-driven performance insights. Building practical projects with
+              Python, SQL, Power BI, and Excel.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-ghost" href="#contact">Contact Me</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel reveal" aria-label="Quick profile snapshot">
+            <p class="panel-title">Profile Snapshot</p>
+            <ul class="stat-grid">
+              <li>
+                <strong data-count="6">0</strong>
+                <span>Portfolio Projects</span>
+              </li>
+              <li>
+                <strong data-count="3">0</strong>
+                <span>Case Competitions</span>
+              </li>
+              <li>
+                <strong data-count="4">0</strong>
+                <span>Tools in Daily Use</span>
+              </li>
+              <li>
+                <strong data-count="2">0</strong>
+                <span>Internships</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">About</p>
+            <h2>Focused on practical finance analytics</h2>
+          </div>
+          <div class="about-grid">
+            <article class="card reveal">
+              <h3>What I am working on</h3>
+              <p>
+                I am currently studying how analytics can improve business decisions in
+                accounting workflows, from anomaly detection in journal entries to
+                dashboard reporting for working capital and margin trends.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>How I approach problems</h3>
+              <p>
+                I start with a business question, map the accounting logic, then test
+                assumptions with data. My focus is not just model accuracy but clear,
+                actionable recommendations for non-technical stakeholders.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Career direction</h3>
+              <p>
+                I am targeting roles in FP&A analytics, audit analytics, or finance
+                data consulting where accounting judgment and data fluency are both
+                essential.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-soft">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>Toolbox for accounting and analytics</h2>
+          </div>
+          <div class="pillars">
+            <article class="pillar reveal">
+              <h3>Accounting</h3>
+              <ul>
+                <li>Financial statement analysis</li>
+                <li>Variance and profitability analysis</li>
+                <li>Audit testing concepts</li>
+                <li>Internal controls review</li>
+              </ul>
+            </article>
+            <article class="pillar reveal">
+              <h3>Analytics</h3>
+              <ul>
+                <li>Exploratory data analysis</li>
+                <li>Regression and classification basics</li>
+                <li>Anomaly detection workflows</li>
+                <li>Business KPI storytelling</li>
+              </ul>
+            </article>
+            <article class="pillar reveal">
+              <h3>Tech Stack</h3>
+              <ul>
+                <li>Python (pandas, scikit-learn)</li>
+                <li>SQL (joins, CTEs, window functions)</li>
+                <li>Power BI and Tableau</li>
+                <li>Excel (Power Query, Pivot, DAX basics)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Featured Work</p>
+            <h2>Projects with business context</h2>
+          </div>
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <p class="project-tag">Audit Analytics</p>
+              <h3>Journal Entry Risk Screening</h3>
+              <p>
+                Built a Python pipeline to flag unusual postings by combining amount
+                thresholds, timing patterns, and account combinations.
+              </p>
+              <div class="project-meta">
+                <span>Python</span><span>SQL</span><span>Power BI</span>
+              </div>
+              <a href="#" aria-label="Open project details">Case Study</a>
+            </article>
+
+            <article class="project-card reveal">
+              <p class="project-tag">FP&A</p>
+              <h3>Gross Margin Variance Dashboard</h3>
+              <p>
+                Designed a dynamic dashboard that decomposes margin movement into
+                volume, price, and cost effects across product categories.
+              </p>
+              <div class="project-meta">
+                <span>Power BI</span><span>DAX</span><span>Excel</span>
+              </div>
+              <a href="#" aria-label="Open project details">Case Study</a>
+            </article>
+
+            <article class="project-card reveal">
+              <p class="project-tag">Working Capital</p>
+              <h3>AR Collection Pattern Analysis</h3>
+              <p>
+                Used SQL and cohort analysis to identify high-risk receivables and
+                recommend collection prioritization rules.
+              </p>
+              <div class="project-meta">
+                <span>SQL</span><span>Python</span><span>Excel</span>
+              </div>
+              <a href="#" aria-label="Open project details">Case Study</a>
+            </article>
+
+            <article class="project-card reveal">
+              <p class="project-tag">Sustainability Reporting</p>
+              <h3>ESG Disclosure Quality Review</h3>
+              <p>
+                Compared sustainability disclosure consistency across industries using
+                text-based indicators and a scoring framework.
+              </p>
+              <div class="project-meta">
+                <span>Python</span><span>NLP</span><span>Tableau</span>
+              </div>
+              <a href="#" aria-label="Open project details">Case Study</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="section section-soft">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Timeline</p>
+            <h2>Education and experience</h2>
+          </div>
+          <ol class="timeline">
+            <li class="reveal">
+              <p class="time">2025 - Present</p>
+              <h3>MSc in Accounting and Analytics</h3>
+              <p>University Name | Relevant modules: Audit Analytics, BI, Forecasting</p>
+            </li>
+            <li class="reveal">
+              <p class="time">2024 - 2025</p>
+              <h3>Finance Data Intern</h3>
+              <p>
+                Built monthly management dashboards and automated reporting templates
+                for cost center reviews.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="time">2022 - 2024</p>
+              <h3>Bachelor's Degree in Accounting</h3>
+              <p>Graduated with strong focus on financial analysis and auditing.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">References</p>
+            <h2>How this portfolio structure was designed</h2>
+          </div>
+          <div class="about-grid">
+            <article class="card reveal">
+              <h3>GitHub Pages Quickstart</h3>
+              <p>
+                The repository and publishing flow follows the official Pages setup
+                for <code>username.github.io</code> projects.
+              </p>
+              <a href="https://docs.github.com/en/pages/quickstart">Read source</a>
+            </article>
+            <article class="card reveal">
+              <h3>Publishing Source Guidance</h3>
+              <p>
+                The deployment notes include branch/root/docs options and practical
+                caveats from GitHub Docs.
+              </p>
+              <a
+                href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+                >Read source</a>
+            </article>
+            <article class="card reveal">
+              <h3>Portfolio Content Best Practices</h3>
+              <p>
+                Project cards highlight business problem, data, methods, and outcomes,
+                based on analytics portfolio guidance.
+              </p>
+              <a href="https://www.datacamp.com/data-portfolio">Read source</a>
+            </article>
+            <article class="card reveal">
+              <h3>Finance Data Analytics Skills</h3>
+              <p>
+                Skill taxonomy reflects accounting + analytics capabilities such as
+                SQL/Python, visualization, and ethical data use.
+              </p>
+              <a
+                href="https://www.accaglobal.com/an/en/qualifications/glance/certificate-in-data-analytics-certda/overview.html"
+                >Read source</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-box reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Open to analytics internships and graduate roles</h2>
+          <p>
+            For collaboration, internship opportunities, or project feedback, feel
+            free to reach out.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+            <a href="https://github.com/your-username">GitHub</a>
+            <a href="https://www.linkedin.com/in/your-linkedin-id">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Built for GitHub Pages | Last updated: March 2026</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
