@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,33 +21,35 @@
 
         <h2>Problem</h2>
         <p>
-          회수 지연 고객이 반복적으로 발생했지만 담당자 경험에 의존해 대응
-          우선순위를 정하는 상황이었습니다.
+          Delayed collections kept recurring, but action priorities were mostly based
+          on individual experience rather than a consistent data-driven method.
         </p>
 
         <h2>Data</h2>
         <ul>
           <li>Invoice-level receivables and payment transactions</li>
-          <li>Customer segment, region, and payment term information</li>
+          <li>Customer segment, region, and payment-term attributes</li>
           <li>Historical collection activity logs</li>
         </ul>
 
         <h2>Approach</h2>
         <p>
-          발행 월 기준 코호트를 구성하고 DSO 추이를 비교했습니다. 연체 반복도와
-          미수 금액 규모를 결합해 대응 우선순위 점수를 계산했습니다.
+          I built monthly cohorts and compared DSO trajectories across segments. Then
+          I combined overdue recurrence and exposure size into a priority score for
+          collection follow-up.
         </p>
 
         <h2>Findings</h2>
         <p>
-          상위 리스크 고객군은 특정 결제조건과 업종 조합에 집중되어 있었고,
-          표준 리마인드 주기보다 빠른 개입이 필요한 집단을 식별할 수 있었습니다.
+          High-risk accounts were concentrated in specific term-industry combinations.
+          The analysis identified a group requiring earlier intervention than the
+          standard reminder cycle.
         </p>
 
         <h2>Next Step</h2>
         <p>
-          CRM 접촉 로그를 추가해 “접촉 시점 대비 회수 가능성” 모델을 만들어
-          운영팀 액션 가이드를 자동화할 계획입니다.
+          The next iteration will add CRM touchpoint history to estimate collection
+          probability by contact timing and automate action guidance for the ops team.
         </p>
       </article>
       <footer>Project note by Minji Kim</footer>
