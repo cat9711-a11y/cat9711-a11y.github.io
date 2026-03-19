@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gross Margin Variance Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./post.css" />
+  </head>
+  <body>
+    <div class="container top-link"><a href="../index.html">← Back to Projects</a></div>
+    <div class="container">
+      <article>
+        <h1>Gross Margin Variance Dashboard</h1>
+        <p class="meta">FP&A · Feb 2026 · Power BI, DAX, Excel</p>
+
+        <h2>Problem</h2>
+        <p>
+          매출총이익률 변동 원인을 매번 수작업으로 설명하다 보니 월간 리뷰
+          회의에서 공통 기준이 없어졌고, 팀 간 해석 차이가 발생했습니다.
+        </p>
+
+        <h2>Data</h2>
+        <ul>
+          <li>Monthly sales and COGS data by product line</li>
+          <li>Price list revisions and discount logs</li>
+          <li>Budget and prior-year baseline</li>
+        </ul>
+
+        <h2>Approach</h2>
+        <p>
+          변동을 가격 효과, 수량 효과, 믹스 효과, 원가 효과로 분해해 한 화면에서
+          drill-down 가능하도록 모델링했습니다. 회의용 요약 페이지와 상세 분석
+          페이지를 분리했습니다.
+        </p>
+
+        <h2>Findings</h2>
+        <p>
+          특정 제품군에서 판가 인상 효과가 있었음에도 원가 상승이 이를 상쇄하고
+          있음을 빠르게 확인했습니다. 원인 설명 시간이 줄고 의사결정 속도가
+          개선되었습니다.
+        </p>
+
+        <h2>Next Step</h2>
+        <p>
+          환율과 프로모션 일정을 예측 변수로 추가해 월초 리스크 사전 경보 기능을
+          확장할 예정입니다.
+        </p>
+      </article>
+      <footer>Project note by Minji Kim</footer>
+    </div>
+  </body>
+</html>

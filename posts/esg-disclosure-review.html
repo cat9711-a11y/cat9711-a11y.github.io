@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESG Disclosure Quality Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./post.css" />
+  </head>
+  <body>
+    <div class="container top-link"><a href="../index.html">← Back to Projects</a></div>
+    <div class="container">
+      <article>
+        <h1>ESG Disclosure Quality Review</h1>
+        <p class="meta">Sustainability Reporting · Mar 2026 · Python, NLP, Tableau</p>
+
+        <h2>Problem</h2>
+        <p>
+          기업별 지속가능성 보고서의 분량은 늘고 있지만 실제로 비교 가능한
+          정보가 충분한지 판단하기 어려웠습니다.
+        </p>
+
+        <h2>Data</h2>
+        <ul>
+          <li>Public sustainability report text across multiple industries</li>
+          <li>Keyword dictionaries by ESG topic</li>
+          <li>Basic firm-level financial indicators</li>
+        </ul>
+
+        <h2>Approach</h2>
+        <p>
+          공시 항목별 키워드 커버리지와 정량 수치 제시 여부를 점수화했습니다.
+          단순 빈도 대신 문맥 기반 필터를 적용해 과대 추정을 줄였습니다.
+        </p>
+
+        <h2>Findings</h2>
+        <p>
+          환경 영역은 상대적으로 수치 공시 비율이 높았지만, 거버넌스 영역은
+          서술형 비중이 높아 비교 가능성이 낮았습니다. 업종별 공시 균형도 차이도
+          확인했습니다.
+        </p>
+
+        <h2>Next Step</h2>
+        <p>
+          연도별 변화 추이를 추가해 “공시 품질 개선 속도”를 추적하고, 외부 평가지표와의
+          상관 분석으로 확장할 예정입니다.
+        </p>
+      </article>
+      <footer>Project note by Minji Kim</footer>
+    </div>
+  </body>
+</html>

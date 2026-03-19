@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Journal Entry Risk Screening</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./post.css" />
+  </head>
+  <body>
+    <div class="container top-link"><a href="../index.html">← Back to Projects</a></div>
+    <div class="container">
+      <article>
+        <h1>Journal Entry Risk Screening</h1>
+        <p class="meta">Audit Analytics · Jan 2026 · SQL, Python</p>
+
+        <h2>Problem</h2>
+        <p>
+          감사 관점에서 전체 분개를 수작업으로 검토하기 어렵기 때문에,
+          우선순위가 높은 분개를 먼저 확인할 수 있는 리스크 스코어가 필요했습니다.
+        </p>
+
+        <h2>Data</h2>
+        <ul>
+          <li>General ledger journal entry export (12 months)</li>
+          <li>User ID / posting timestamp / amount / account combination</li>
+          <li>Manual adjustment flags and period-end indicators</li>
+        </ul>
+
+        <h2>Approach</h2>
+        <p>
+          절대 금액 상위 구간, 야간/주말 입력, 희귀 계정 조합, 월말 집중도를
+          가중치로 합산해 점수를 계산했습니다. 점수 기준은 샘플 검토를 통해
+          보정했습니다.
+        </p>
+
+        <h2>Findings</h2>
+        <p>
+          전체 분개의 약 4%가 고위험 구간으로 분류되었고, 이 범위에서 수동
+          정정분개 비중이 유의하게 높았습니다. 감사 테스트의 시작 지점을
+          명확히 제시할 수 있었습니다.
+        </p>
+
+        <h2>Next Step</h2>
+        <p>
+          분기별로 가중치를 자동 재학습하고, 조직별 승인 정책 차이를 반영해
+          오탐률을 낮출 계획입니다.
+        </p>
+      </article>
+      <footer>Project note by Minji Kim</footer>
+    </div>
+  </body>
+</html>

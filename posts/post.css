@@ -1,0 +1,90 @@
+:root {
+  --bg: #f4f5f8;
+  --surface: #ffffff;
+  --ink: #171d2a;
+  --ink-soft: #5a6477;
+  --line: #d9dfeb;
+  --accent: #284e9a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(760px, 92%);
+  margin: 0 auto;
+}
+
+.top-link {
+  padding: 28px 0 0;
+}
+
+.top-link a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+article {
+  margin: 20px 0 48px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 26px 24px 28px;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  font-family: "Manrope", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: clamp(1.6rem, 4.4vw, 2.2rem);
+}
+
+.meta {
+  margin: 0 0 20px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+h2 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 1.18rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+footer {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  text-align: center;
+  padding-bottom: 24px;
+}

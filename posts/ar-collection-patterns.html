@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Collection Pattern Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./post.css" />
+  </head>
+  <body>
+    <div class="container top-link"><a href="../index.html">← Back to Projects</a></div>
+    <div class="container">
+      <article>
+        <h1>AR Collection Pattern Analysis</h1>
+        <p class="meta">Working Capital · Mar 2026 · SQL, Python</p>
+
+        <h2>Problem</h2>
+        <p>
+          회수 지연 고객이 반복적으로 발생했지만 담당자 경험에 의존해 대응
+          우선순위를 정하는 상황이었습니다.
+        </p>
+
+        <h2>Data</h2>
+        <ul>
+          <li>Invoice-level receivables and payment transactions</li>
+          <li>Customer segment, region, and payment term information</li>
+          <li>Historical collection activity logs</li>
+        </ul>
+
+        <h2>Approach</h2>
+        <p>
+          발행 월 기준 코호트를 구성하고 DSO 추이를 비교했습니다. 연체 반복도와
+          미수 금액 규모를 결합해 대응 우선순위 점수를 계산했습니다.
+        </p>
+
+        <h2>Findings</h2>
+        <p>
+          상위 리스크 고객군은 특정 결제조건과 업종 조합에 집중되어 있었고,
+          표준 리마인드 주기보다 빠른 개입이 필요한 집단을 식별할 수 있었습니다.
+        </p>
+
+        <h2>Next Step</h2>
+        <p>
+          CRM 접촉 로그를 추가해 “접촉 시점 대비 회수 가능성” 모델을 만들어
+          운영팀 액션 가이드를 자동화할 계획입니다.
+        </p>
+      </article>
+      <footer>Project note by Minji Kim</footer>
+    </div>
+  </body>
+</html>
