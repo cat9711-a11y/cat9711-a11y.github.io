@@ -309,6 +309,17 @@ h3 {
     repeating-linear-gradient(45deg, rgba(40, 78, 154, 0.08) 0 8px, transparent 8px 18px);
 }
 
+.cover-tax {
+  background: linear-gradient(140deg, #e7f6ef 0%, #ffffff 58%),
+    radial-gradient(circle at 16% 24%, rgba(43, 122, 74, 0.24) 0 38px, transparent 39px),
+    radial-gradient(circle at 84% 30%, rgba(39, 84, 173, 0.2) 0 30px, transparent 31px),
+    repeating-linear-gradient(
+      90deg,
+      rgba(39, 84, 173, 0.08) 0 1px,
+      transparent 1px 38px
+    );
+}
+
 .post-body {
   padding: 18px 18px 20px;
 }

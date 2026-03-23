@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026 Ireland PAYE Refund Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./post.css" />
+  </head>
+  <body>
+    <div class="container top-link"><a href="../index.html">Back to Projects</a></div>
+    <div class="container">
+      <article>
+        <h1>2026 Ireland PAYE Refund Calculator</h1>
+        <p class="meta">Tax Analytics - Mar 2026 - Next.js, FastAPI</p>
+
+        <p>
+          This project is a refund-first tax estimator for people in Ireland who want
+          a practical view of potential PAYE income tax refunds for 2026.
+        </p>
+
+        <a
+          class="landing-card"
+          href="https://frontend-cat9711-a11ys-projects.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open live PAYE refund calculator site"
+        >
+          <img
+            class="preview-image"
+            src="../assets/ireland-refund-calculator-preview.svg"
+            alt="Preview of the Ireland PAYE refund calculator interface"
+          />
+          <span class="landing-text">Open live site</span>
+        </a>
+
+        <h2>Purpose</h2>
+        <p>
+          Most tax calculators focus on total liability only. I wanted a tool that
+          starts from user intent: "How much refund might I receive?" The app compares
+          PAYE tax already withheld against an estimated final income tax liability.
+        </p>
+
+        <h2>Data</h2>
+        <ul>
+          <li>User-provided income and profile inputs (PAYE-focused)</li>
+          <li>Claim and relief selections by category (Income/Family, Housing, Pension/Fund)</li>
+          <li>Official 2026 rules from Revenue guidance and Budget references</li>
+        </ul>
+
+        <h2>Approach</h2>
+        <p>
+          The backend computes a baseline liability first, then applies selected credits
+          and reliefs step-by-step to estimate refund impact by claim. This keeps the
+          result transparent and easy to explain. The frontend presents both summary
+          outcomes and claim-level contribution.
+        </p>
+
+        <h2>Findings</h2>
+        <p>
+          In testing, users understood refund drivers better when the result was shown
+          as a decomposition instead of a single number. Grouping claims by life
+          context (family, housing, pension/health) improved usability and reduced
+          input confusion.
+        </p>
+
+        <h2>Next Step</h2>
+        <p>
+          The next iteration will add scenario save/compare, validation hints for edge
+          cases, and optional guidance for documents needed when filing claims.
+        </p>
+
+        <h2>References</h2>
+        <ul class="reference-list">
+          <li>
+            <a
+              href="https://www.revenue.ie/en/personal-tax-credits-reliefs-and-exemptions/tax-relief-charts/index.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Revenue: Tax rates, bands and relief charts</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.revenue.ie/en/personal-tax-credits-reliefs-and-exemptions/income-and-employment/employee-tax-credit/index.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Revenue: Employee Tax Credit</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.revenue.ie/en/personal-tax-credits-reliefs-and-exemptions/land-and-property/rent-credit/how-much-claim.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Revenue: Rent Tax Credit (how much you can claim)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.revenue.ie/en/jobs-and-pensions/pension/relief/tax-relief-limits.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Revenue: Pension contribution tax relief limits</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.revenue.ie/en/corporate/press-office/budget-information/current-year/budget-summary.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Revenue: Budget summary (official PDF)</a
+            >
+          </li>
+        </ul>
+
+        <p class="small-note">
+          Educational estimator only. Final eligibility should be validated with
+          official Revenue guidance or a licensed adviser.
+        </p>
+      </article>
+      <footer>Project note by Joowon Lee</footer>
+    </div>
+  </body>
+</html>

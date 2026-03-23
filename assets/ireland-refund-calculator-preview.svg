@@ -1,0 +1,32 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="20" fill="#F7F9FD"/>
+  <rect x="24" y="24" width="1152" height="652" rx="16" fill="white" stroke="#D6DEEB"/>
+  <rect x="24" y="24" width="1152" height="54" rx="16" fill="#E6EAF1"/>
+  <circle cx="54" cy="51" r="8" fill="#FF5F56"/>
+  <circle cx="80" cy="51" r="8" fill="#FFBD2E"/>
+  <circle cx="106" cy="51" r="8" fill="#27C93F"/>
+  <rect x="140" y="40" width="980" height="22" rx="11" fill="#F4F6FA" stroke="#D4DBE8"/>
+  <rect x="64" y="112" width="340" height="506" rx="14" fill="#F6FAF8" stroke="#D7E4DC"/>
+  <text x="92" y="156" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#204B3E">PAYE Refund Inputs</text>
+  <rect x="92" y="188" width="284" height="44" rx="8" fill="white" stroke="#D6DEEB"/>
+  <rect x="92" y="248" width="284" height="44" rx="8" fill="white" stroke="#D6DEEB"/>
+  <rect x="92" y="308" width="284" height="44" rx="8" fill="white" stroke="#D6DEEB"/>
+  <rect x="92" y="388" width="284" height="52" rx="10" fill="#2E6B55"/>
+  <text x="178" y="421" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="white">Calculate</text>
+  <rect x="436" y="112" width="700" height="200" rx="14" fill="#F2F6FF" stroke="#D6DEEB"/>
+  <text x="468" y="156" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1E376E">Estimated Refund</text>
+  <text x="468" y="230" font-family="Arial, sans-serif" font-size="62" font-weight="700" fill="#254A95">EUR 2,480</text>
+  <rect x="436" y="336" width="336" height="282" rx="14" fill="white" stroke="#D6DEEB"/>
+  <rect x="800" y="336" width="336" height="282" rx="14" fill="white" stroke="#D6DEEB"/>
+  <text x="466" y="376" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1C2433">Claim Impact</text>
+  <text x="830" y="376" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1C2433">Breakdown</text>
+  <rect x="470" y="408" width="210" height="18" rx="9" fill="#CEDAF6"/>
+  <rect x="470" y="442" width="250" height="18" rx="9" fill="#ADC2EE"/>
+  <rect x="470" y="476" width="170" height="18" rx="9" fill="#90ACE8"/>
+  <rect x="470" y="510" width="286" height="18" rx="9" fill="#6E92DE"/>
+  <rect x="834" y="408" width="268" height="28" rx="10" fill="#EDF2FD"/>
+  <rect x="834" y="448" width="268" height="28" rx="10" fill="#EDF2FD"/>
+  <rect x="834" y="488" width="268" height="28" rx="10" fill="#EDF2FD"/>
+  <rect x="834" y="528" width="268" height="28" rx="10" fill="#EDF2FD"/>
+  <text x="874" y="645" font-family="Arial, sans-serif" font-size="18" fill="#5D6880">Preview mock for project post</text>
+</svg>
