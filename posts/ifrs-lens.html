@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>IFRS Lens | Joowon Lee Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2563EB",
+              "surface": "#F9F9F7",
+              "on-surface": "#1A2332",
+              "surface-variant": "#F0F2F5",
+              "on-surface-variant": "#3D4654",
+              "outline": "#DDE1E7",
+              "secondary-container": "#E8EAED"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Inter", "sans-serif"],
+              "mono": ["JetBrains Mono", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}
+          }
+        }
+      };
+    </script>
+    <style>
+      body { font-family: "Inter", sans-serif; }
+      .font-serif { font-family: "Newsreader", serif; }
+      .font-mono { font-family: "JetBrains Mono", monospace; }
+      .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24; }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-secondary-container">
+    <main class="pt-20">
+      <header class="mx-auto mb-24 max-w-7xl px-8">
+        <div class="max-w-4xl">
+          <h1 class="mb-6 font-serif text-7xl font-bold tracking-tight text-on-surface md:text-8xl">IFRS Lens</h1>
+          <p class="mb-8 font-serif text-2xl italic text-on-surface-variant md:text-3xl">Automated IFRS Analysis Pipeline &middot; 2026</p>
+          <div class="mb-16 flex flex-wrap items-center gap-6">
+            <a class="flex items-center gap-2 rounded-lg bg-primary px-8 py-4 font-medium text-white transition-all hover:shadow-lg" href="https://irish-market-watch.vercel.app" rel="noopener noreferrer" target="_blank">
+              Visit Live Site
+              <span class="material-symbols-outlined text-sm">north_east</span>
+            </a>
+          </div>
+          <div class="my-12 max-w-2xl">
+            <hr class="border-outline" />
+            <p class="mt-8 mb-4 font-serif text-sm font-medium text-on-surface">What IFRS Lens surfaces for each analysis:</p>
+            <ul class="mb-8 ml-5 list-disc space-y-2 text-sm leading-[1.6] text-on-surface-variant">
+              <li>Which industries are affected and how the impact flows through the sector</li>
+              <li>Which Irish companies or multinationals operating in Ireland are most exposed and why</li>
+              <li>What the relevant accounting standard is and what judgement the finance team would actually need to make</li>
+              <li>What an accountant should be thinking about when this kind of news breaks</li>
+            </ul>
+            <hr class="border-outline" />
+          </div>
+          <div class="rounded-xl border border-outline bg-surface-variant p-8">
+            <h2 class="mb-6 font-mono text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/70">Tech Stack</h2>
+            <div class="space-y-4">
+              <div class="grid grid-cols-1 items-center gap-4 border-b border-outline pb-4 md:grid-cols-4">
+                <span class="font-mono text-[10px] font-bold uppercase text-on-surface-variant">Backend</span>
+                <span class="font-mono text-sm md:col-span-3">FastAPI &middot; Python</span>
+              </div>
+              <div class="grid grid-cols-1 items-center gap-4 border-b border-outline pb-4 md:grid-cols-4">
+                <span class="font-mono text-[10px] font-bold uppercase text-on-surface-variant">Frontend</span>
+                <span class="font-mono text-sm md:col-span-3">Jinja2 &middot; Tailwind CSS &middot; Vanilla JS</span>
+              </div>
+              <div class="grid grid-cols-1 items-center gap-4 border-b border-outline pb-4 md:grid-cols-4">
+                <span class="font-mono text-[10px] font-bold uppercase text-on-surface-variant">Database</span>
+                <span class="font-mono text-sm md:col-span-3">Supabase (Postgres)</span>
+              </div>
+              <div class="grid grid-cols-1 items-center gap-4 border-b border-outline pb-4 md:grid-cols-4">
+                <span class="font-mono text-[10px] font-bold uppercase text-on-surface-variant">AI</span>
+                <span class="font-mono text-sm md:col-span-3">Gemini 2.5 Flash API</span>
+              </div>
+              <div class="grid grid-cols-1 items-center gap-4 border-b border-outline pb-4 md:grid-cols-4">
+                <span class="font-mono text-[10px] font-bold uppercase text-on-surface-variant">Scraping</span>
+                <span class="font-mono text-sm md:col-span-3">BeautifulSoup4 &middot; trafilatura</span>
+              </div>
+              <div class="grid grid-cols-1 items-center gap-4 border-b border-outline pb-4 md:grid-cols-4">
+                <span class="font-mono text-[10px] font-bold uppercase text-on-surface-variant">Deploy</span>
+                <span class="font-mono text-sm md:col-span-3">Vercel</span>
+              </div>
+              <div class="grid grid-cols-1 items-center gap-4 border-b border-outline md:grid-cols-4">
+                <span class="font-mono text-[10px] font-bold uppercase text-on-surface-variant">Automation</span>
+                <span class="font-mono text-sm md:col-span-3">GitHub Actions (Daily 11AM Dublin)</span>
+              </div>
+              <div class="grid grid-cols-1 items-center gap-4 border-t border-outline pt-4 md:grid-cols-4">
+                <span class="font-mono text-[10px] font-bold uppercase text-on-surface-variant">UI/UX</span>
+                <span class="font-mono text-sm md:col-span-3">Google Stitch</span>
+              </div>
+            </div>
+            <p class="mt-8 text-[11px] italic leading-relaxed text-on-surface-variant/60"><b>Backend and frontend implemented with the assistance of Codex, Google Stitch.</b></p>
+          </div>
+        </div>
+      </header>
+
+      <section class="bg-surface-variant px-8 py-32">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="mb-16 font-serif text-4xl font-bold text-on-surface">How I started</h2>
+          <div class="max-w-4xl">
+            <div class="flex gap-8 md:gap-12">
+              <div class="flex flex-col items-center">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-outline bg-surface font-mono text-xs font-bold text-on-surface-variant/60">01</div>
+                <div class="my-2 h-full w-px bg-outline"></div>
+              </div>
+              <div class="flex-1 pb-16">
+                <div class="rounded-[10px] border border-outline/60 bg-surface p-6 shadow-sm">
+                  <p class="mb-3 font-mono text-[11px] uppercase tracking-[0.1em] text-on-surface-variant/50">The Gap</p>
+                  <h3 class="mb-3 text-[14px] font-medium text-on-surface">Knowing IFRS from class was not enough</h3>
+                  <p class="text-[13px] leading-[1.6] text-on-surface-variant">As an international student at Trinity, I needed to understand the Irish business environment those standards actually operate in like the WRC, the CBI, and ComReg. That kind of contextual knowledge does not come from textbooks.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-8 md:gap-12">
+              <div class="flex flex-col items-center">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-outline bg-surface font-mono text-xs font-bold text-on-surface-variant/60">02</div>
+                <div class="my-2 h-full w-px bg-outline"></div>
+              </div>
+              <div class="flex-1 pb-16">
+                <div class="rounded-[10px] border border-outline/60 bg-surface p-6 shadow-sm">
+                  <p class="mb-3 font-mono text-[11px] uppercase tracking-[0.1em] text-on-surface-variant/50">The Instinct</p>
+                  <h3 class="mb-3 text-[14px] font-medium text-on-surface">Read 3 Irish business articles every morning and connect each to the right IFRS standard</h3>
+                  <p class="text-[13px] leading-[1.6] text-on-surface-variant">The real value would come from consistently linking each story to the accounting standards I was learning, across different industries every day.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-8 md:gap-12">
+              <div class="flex flex-col items-center">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-surface font-mono text-xs font-bold text-primary shadow-[0_0_15px_rgba(37,99,235,0.1)]">03</div>
+                <div class="my-2 h-full w-px bg-outline"></div>
+              </div>
+              <div class="flex-1 pb-16">
+                <div class="rounded-[10px] border-2 border-on-surface/20 bg-surface p-6 shadow-md">
+                  <p class="mb-3 font-mono text-[11px] font-bold uppercase tracking-[0.1em] text-primary">The Problem</p>
+                  <h3 class="mb-3 text-[14px] font-medium text-on-surface">The depth of analysis I wanted was not compatible with doing it manually</h3>
+                  <p class="text-[13px] leading-[1.6] text-on-surface-variant">Keeping up with coursework and exams made it unrealistic. So I made a decision: automate the analysis, and focus my energy on evaluating whether it was right.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-8 md:gap-12">
+              <div class="flex flex-col items-center">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-outline bg-surface font-mono text-xs font-bold text-on-surface-variant/60">04</div>
+              </div>
+              <div class="flex-1">
+                <div class="rounded-[10px] border border-outline/60 bg-surface p-6 shadow-sm">
+                  <p class="mb-3 font-mono text-[11px] uppercase tracking-[0.1em] text-on-surface-variant/50">Why Automate</p>
+                  <h3 class="mb-3 text-[14px] font-medium text-on-surface">Skill</h3>
+                  <p class="text-[13px] leading-[1.6] text-on-surface-variant">In a world where AI is advancing, the ability to automate repetitive analytical tasks is increasingly a core skill. Reading the news myself and writing analysis manually would have value. But designing a system that does it, and then judging whether the output is correct, felt like better preparation for how work is actually changing. The human role is shifting from doing the analysis to evaluating it. This project was my attempt to practise that shift deliberately.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-8 py-32">
+        <h2 class="mb-16 font-serif text-4xl font-bold">What I Built</h2>
+        <div class="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-lg border border-outline bg-surface p-8">
+            <span class="mb-4 block font-serif text-4xl font-bold text-primary/20">01</span>
+            <h3 class="mb-3 font-serif text-xl font-bold">Curation</h3>
+            <p class="text-sm leading-relaxed text-on-surface-variant">Scrapes RTE Business and Irish Times daily, filtered by a 3-dimension scoring rubric before entering pipeline</p>
+          </div>
+          <div class="rounded-lg border border-outline bg-surface p-8">
+            <span class="mb-4 block font-serif text-4xl font-bold text-primary/20">02</span>
+            <h3 class="mb-3 font-serif text-xl font-bold">IFRS Mapping</h3>
+            <p class="text-sm leading-relaxed text-on-surface-variant">Maps each article to the most relevant IAS/IFRS standard for that event type, with full titles cited</p>
+          </div>
+          <div class="rounded-lg border border-outline bg-surface p-8">
+            <span class="mb-4 block font-serif text-4xl font-bold text-primary/20">03</span>
+            <h3 class="mb-3 font-serif text-xl font-bold">Irish Reg</h3>
+            <p class="text-sm leading-relaxed text-on-surface-variant">Identifies the relevant Irish regulatory body per article type - WRC, CBI, ComReg, DPC, Revenue, CRU, CCPC, SEAI and more</p>
+          </div>
+          <div class="rounded-lg border border-outline bg-surface p-8">
+            <span class="mb-4 block font-serif text-4xl font-bold text-primary/20">04</span>
+            <h3 class="mb-3 font-serif text-xl font-bold">Case Study</h3>
+            <p class="text-sm leading-relaxed text-on-surface-variant">Generates P&amp;L and balance sheet impact, management judgement, and an interview-style accounting question</p>
+          </div>
+        </div>
+        <div class="rounded-xl border border-outline bg-surface-variant p-10">
+          <div class="mb-6 flex flex-col items-center justify-between gap-8 md:flex-row">
+            <div class="text-center md:text-left">
+              <p class="mb-2 font-mono text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Metrics</p>
+              <p class="font-serif text-2xl">3 posts published everyday</p>
+            </div>
+            <div class="text-center md:text-right">
+              <p class="mb-2 font-mono text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Industries Covered</p>
+              <div class="flex flex-wrap justify-center gap-2 md:justify-end">
+                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Employment</span>
+                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">M&amp;A</span>
+                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Financial Services</span>
+                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Energy</span>
+                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Technology</span>
+                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Retail</span>
+                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Telecoms</span>
+                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Consumer Goods</span>
+              </div>
+            </div>
+          </div>
+          <p class="border-t border-outline pt-6 text-[11px] italic leading-relaxed text-on-surface-variant/60">The standards applied vary by article. IAS 37 for a WRC ruling, IFRS 3 for a merger, IAS 38 for R&amp;D capitalisation, IFRS 15 for new service launches. The pipeline identifies the right standard for each case, not a fixed set.</p>
+        </div>
+      </section>
+
+      <section class="bg-surface-variant px-8 py-32">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-16 max-w-2xl">
+            <h2 class="mb-4 font-serif text-4xl font-bold">Not every article makes it in.</h2>
+            <p class="italic text-on-surface-variant">Before any analysis runs, every article passes through a five-stage automated pipeline.</p>
+          </div>
+          <div class="mx-auto flex max-w-2xl flex-col items-center gap-4">
+            <div class="w-full rounded-lg border border-outline bg-white p-6 shadow-sm">
+              <h3 class="mb-3 text-[14px] font-semibold text-on-surface">Stage 1 - Source &amp; URL filtering</h3>
+              <div class="space-y-1 font-mono text-[13px] text-on-surface-variant">
+                <p>- Collects from RTE Business + Irish Times Business</p>
+                <p>- RSS feeds + section pages</p>
+                <p>- Auto-excludes non-target URLs (podcast / video / subscriber-help etc.)</p>
+                <p>- Excludes titles that are too short or navigation text</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant/40">south</span>
+            <div class="w-full rounded-lg border border-outline bg-white p-6 shadow-sm">
+              <h3 class="mb-3 text-[14px] font-semibold text-on-surface">Stage 2 - Paywall &amp; substance filter</h3>
+              <div class="space-y-1 font-mono text-[13px] text-on-surface-variant">
+                <p>- Fetches full article body</p>
+                <p>- Excludes on paywall detection</p>
+                <p>- Excludes articles with fewer than 320 characters of public content</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant/40">south</span>
+            <div class="w-full rounded-lg border border-outline bg-white p-6 shadow-sm">
+              <h3 class="mb-3 text-[14px] font-semibold text-on-surface">Stage 3 - Deduplication</h3>
+              <div class="space-y-1 font-mono text-[13px] text-on-surface-variant">
+                <p>- URL-level deduplication</p>
+                <p>- Near-duplicate title deduplication</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant/40">south</span>
+            <div class="w-full rounded-lg border border-outline bg-white p-6 shadow-sm">
+              <h3 class="mb-3 text-[14px] font-semibold text-on-surface">Stage 4 - Relevance scoring</h3>
+              <div class="space-y-3 font-mono text-[13px] text-on-surface-variant">
+                <div>
+                  <p>- Recency: 45%</p>
+                  <p>- Source prominence: 15%</p>
+                  <p>- Irish / macroeconomic relevance: 40%</p>
+                </div>
+                <p><span class="text-[10px] font-bold uppercase text-emerald-600">Upweighted:</span> Ireland, Irish, Dublin, WRC, CBI, merger, tax, impairment, mortgage etc.</p>
+                <p><span class="text-[10px] font-bold uppercase text-red-500">Downweighted:</span> low-signal global stories (KitKat theft, cricket team etc.)</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant/40">south</span>
+            <div class="w-full rounded-lg border border-outline bg-white p-6 shadow-sm">
+              <h3 class="mb-3 text-[14px] font-semibold text-on-surface">Stage 5 - Final selection</h3>
+              <div class="space-y-1 font-mono text-[13px] text-on-surface-variant">
+                <p>- Max 2 articles per source</p>
+                <p>- Final 3 articles selected</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-8 py-32">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="mb-4 max-w-2xl font-serif text-4xl font-bold md:text-5xl">The first outputs were bad. Here is what I did about it.</h2>
+          <p class="mb-12 italic text-on-surface-variant">The first output from <b>Gemini API</b> was not good. I documented every failure, built rules to fix them, and learned when prompting alone was not enough. The prompt framework went through multiple iteration cycles with 10+ documented rule changes.</p>
+          <div class="mb-12 overflow-hidden rounded-lg border border-outline bg-white">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="border-b border-outline bg-surface-variant">
+                  <th class="p-6 font-serif text-lg">Failure</th>
+                  <th class="p-6 font-serif text-lg">Fix</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline">
+                <tr><td class="p-6 font-mono text-sm text-red-600">"IFRS 37" not "IAS 37"</td><td class="p-6">Naming convention rule</td></tr>
+                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">Irish law missing entirely</td><td class="p-6">Regulatory anchoring</td></tr>
+                <tr><td class="p-6 font-mono text-sm text-red-600">Invented figures presented as facts</td><td class="p-6">Inference discipline</td></tr>
+                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">Wrong regulator applied</td><td class="p-6">Causal link requirement</td></tr>
+                <tr><td class="p-6 font-mono text-sm text-red-600">Legal jargon misused</td><td class="p-6">Plain language rule</td></tr>
+                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">WACC in every analysis</td><td class="p-6">Application condition</td></tr>
+                <tr><td class="p-6 font-mono text-sm text-red-600">3 topics always forced</td><td class="p-6">Min/max constraint</td></tr>
+                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">Irish entities, no causal link</td><td class="p-6">Irish Context Discipline rule (RULE 3-A)</td></tr>
+                <tr><td class="p-6 font-mono text-sm text-red-600">Duplicate section output</td><td class="p-6">Post-processing layer</td></tr>
+                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">"IFRS/" rendering bug</td><td class="p-6">Regex post-processing</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mb-12">
+            <p class="mb-8 font-serif text-lg italic leading-relaxed text-on-surface-variant">The table above summarises what changed across iterations. Below is the prompt framework that resulted. 5 priority rules governing naming discipline, regulatory anchoring, inference boundaries, WACC application, and empty section handling.</p>
+            <details class="group overflow-hidden rounded-xl border border-outline bg-surface-variant transition-all duration-300">
+              <summary class="flex cursor-pointer items-center justify-between p-6 transition-colors hover:bg-surface-variant/80">
+                <span class="font-serif text-xl font-bold text-on-surface">View Full Prompt Framework</span>
+                <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-45">add</span>
+              </summary>
+              <div class="p-6 pt-0">
+                <div class="overflow-x-auto rounded-lg bg-[#1A2332] p-8">
+                  <pre class="whitespace-pre-wrap font-mono text-sm leading-relaxed text-white"># IFRS Lens Analysis Framework v2.4
+
+**RULE 1: NAMING CONVENTION DISCIPLINE**
+Use only valid standard prefixes. There is no IFRS 37; provisions fall under IAS 37. Always cross-check prefix (IFRS vs IAS) before generation.
+
+**RULE 2: REGULATORY ANCHORING (IRISH CONTEXT)**
+Every analysis MUST anchor to the specific Irish regulatory body (WRC, CBI, ComReg, etc.) based on the industry sector identified.
+
+**RULE 3: INFERENCE BOUNDARIES**
+For quantitative data not present in the source text, use "Inferred/Not Disclosed" or qualitative ranges. Do not invent specific currency figures.
+
+**RULE 4: WACC APPLICATION CONDITIONS**
+Only include Weighted Average Cost of Capital (WACC) discussion if the article describes impairment testing (IAS 36) or long-term asset valuation.
+
+**RULE 5: MIN/MAX CONSTRAINT**
+Identify at least 1 but no more than 3 key accounting judgements. If only 1 is material, do not force secondary filler content.</pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-surface-variant px-8 py-32">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="mb-4 font-serif text-4xl font-bold">How Analysis Improved.</h2>
+          <div class="mb-8 flex flex-wrap gap-2">
+            <span class="rounded-full bg-secondary-container px-3 py-1 font-mono text-[10px] font-bold uppercase text-on-surface-variant">IFRS/IAS Accuracy</span>
+            <span class="rounded-full bg-secondary-container px-3 py-1 font-mono text-[10px] font-bold uppercase text-on-surface-variant">Factual Accuracy</span>
+            <span class="rounded-full bg-secondary-container px-3 py-1 font-mono text-[10px] font-bold uppercase text-on-surface-variant">Irish Reg Grounding</span>
+            <span class="rounded-full bg-secondary-container px-3 py-1 font-mono text-[10px] font-bold uppercase text-on-surface-variant">Inference Discipline</span>
+            <span class="rounded-full bg-secondary-container px-3 py-1 font-mono text-[10px] font-bold uppercase text-on-surface-variant">Analytical Depth</span>
+          </div>
+          <p class="mb-12 text-sm italic text-on-surface-variant">These dimensions were not defined upfront. They emerged from recurring failure patterns and were formalised over time.</p>
+          <div class="overflow-hidden rounded-lg border border-outline bg-white">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="bg-surface-variant/50">
+                  <th class="p-6 text-xs font-bold uppercase tracking-widest">Case</th>
+                  <th class="p-6 text-xs font-bold uppercase tracking-widest">Score</th>
+                  <th class="p-6 text-xs font-bold uppercase tracking-widest">Key Issue Fixed</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline">
+                <tr><td class="p-6">Lionbridge v1</td><td class="p-6 font-serif">7.0</td><td class="p-6 text-sm text-on-surface-variant">IFRS naming, no Irish law</td></tr>
+                <tr><td class="p-6">Lionbridge v2</td><td class="p-6 font-serif">8.5</td><td class="p-6 text-sm text-on-surface-variant">Legal jargon misuse</td></tr>
+                <tr><td class="p-6">Meta/Google</td><td class="p-6 font-serif">8.0</td><td class="p-6 text-sm text-on-surface-variant">Wrong damages figure</td></tr>
+                <tr><td class="p-6">Iran/Oil v1</td><td class="p-6 font-serif">8.0</td><td class="p-6 text-sm text-on-surface-variant">No causal link to Ireland</td></tr>
+                <tr><td class="p-6">Iran/Oil v2</td><td class="p-6 font-serif">8.2</td><td class="p-6 text-sm text-on-surface-variant">Duplicate output</td></tr>
+                <tr class="border-l-4 border-l-primary bg-primary/5"><td class="p-6 font-bold">Lionbridge v3</td><td class="p-6 font-serif text-xl font-bold text-primary">9.4</td><td class="p-6 text-sm font-medium">All rules applied cleanly</td></tr>
+                <tr><td class="p-6">Next</td><td class="p-6 font-serif">9.0</td><td class="p-6 text-sm text-on-surface-variant">Inference hedging</td></tr>
+                <tr><td class="p-6">Vodafone</td><td class="p-6 font-serif">9.2</td><td class="p-6 text-sm text-on-surface-variant">ES-body inconsistency</td></tr>
+                <tr><td class="p-6">Pernod Ricard</td><td class="p-6 font-serif">9.3</td><td class="p-6 text-sm text-on-surface-variant">IFRS 3 M&amp;A applied cleanly</td></tr>
+                <tr><td class="p-6">Credit Unions</td><td class="p-6 font-serif">9.1</td><td class="p-6 text-sm text-on-surface-variant">IFRS 3 + CBI context clean</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-6 text-right text-[11px] italic leading-relaxed text-on-surface-variant/60">Scores are self-assessed against the 5-dimension rubric. Not externally validated but consistent and applied to every case.</p>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-8 py-32">
+        <h2 class="mb-16 font-serif text-4xl font-bold">What I Learned</h2>
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+          <div class="space-y-6">
+            <h3 class="border-b border-outline pb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-primary">01 - Building it</h3>
+            <ul class="space-y-4 text-sm leading-relaxed text-on-surface-variant">
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>Prompt length has diminishing returns.</p></li>
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>Fixed output counts cause fabrication.</p></li>
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>Some things cannot be fixed through prompting.</p></li>
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>Knowing when to stop and write code instead turned out to be its own lesson.</p></li>
+            </ul>
+          </div>
+          <div class="space-y-6">
+            <h3 class="border-b border-outline pb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-primary">02 - Running it</h3>
+            <ul class="space-y-4 text-sm leading-relaxed text-on-surface-variant">
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>In most firms, an associate prepares the work. A manager reviews it, challenges it, and decides. That structure is changing.</p></li>
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>AI can now do much of what an associate does, faster, and at scale.</p></li>
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>What is left for the human is the manager's job. Deciding what good enough looks like. Verifying the output is actually correct. Taking responsibility for the judgement.</p></li>
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>This project was a small version of that. The pipeline prepares the analysis. My job was to define what trustworthy output looks like, and hold it to that standard.</p></li>
+            </ul>
+          </div>
+          <div class="space-y-6">
+            <h3 class="border-b border-outline pb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-primary">03 - What this means for accounting</h3>
+            <ul class="space-y-4 text-sm leading-relaxed text-on-surface-variant">
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>AI can generate a structured IFRS analysis in seconds. What it cannot do is know whether it is right, or what the consequences are if it is wrong.</p></li>
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>For anyone going into accounting, the ability to evaluate, question, and verify analytical output is becoming as important as producing it.</p></li>
+              <li class="flex gap-3"><span class="font-bold text-primary">-</span><p>The technical skills still matter. But so does knowing what good judgement looks like and being able to recognise when it is missing.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="w-full border-t border-slate-800 bg-[#1A2332] px-8 py-12 text-white">
+      <div class="mx-auto flex max-w-7xl justify-center">
+        <p class="text-sm font-medium tracking-tight">Joowon Lee <span class="mx-2 text-slate-500">|</span> Open to Graduate opportunities in Audit &amp; Analytics</p>
+      </div>
+    </footer>
+  </body>
+</html>
