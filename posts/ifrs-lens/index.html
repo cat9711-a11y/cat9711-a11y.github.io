@@ -188,28 +188,6 @@
             <p class="text-sm leading-relaxed text-on-surface-variant">Generates P&amp;L and balance sheet impact, management judgement, and an interview-style accounting question</p>
           </div>
         </div>
-        <div class="rounded-xl border border-outline bg-surface-variant p-10">
-          <div class="mb-6 flex flex-col items-center justify-between gap-8 md:flex-row">
-            <div class="text-center md:text-left">
-              <p class="mb-2 font-mono text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Metrics</p>
-              <p class="font-serif text-2xl">3 posts published everyday</p>
-            </div>
-            <div class="text-center md:text-right">
-              <p class="mb-2 font-mono text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Industries Covered</p>
-              <div class="flex flex-wrap justify-center gap-2 md:justify-end">
-                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Employment</span>
-                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">M&amp;A</span>
-                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Financial Services</span>
-                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Energy</span>
-                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Technology</span>
-                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Retail</span>
-                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Telecoms</span>
-                <span class="border border-outline bg-white px-2 py-1 text-xs font-mono">Consumer Goods</span>
-              </div>
-            </div>
-          </div>
-          <p class="border-t border-outline pt-6 text-[11px] italic leading-relaxed text-on-surface-variant/60">The standards applied vary by article. IAS 37 for a WRC ruling, IFRS 3 for a merger, IAS 38 for R&amp;D capitalisation, IFRS 15 for new service launches. The pipeline identifies the right standard for each case, not a fixed set.</p>
-        </div>
       </section>
 
       <section class="bg-surface-variant px-8 py-32">
@@ -330,47 +308,6 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div class="mb-6">
-            <p class="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Regex-Based Validation Rules</p>
-            <div class="overflow-x-auto rounded-lg border border-outline bg-white">
-              <table class="w-full min-w-[820px] text-left">
-                <thead>
-                  <tr class="border-b border-outline bg-surface-variant">
-                    <th class="p-6 font-serif text-lg">Validation Check</th>
-                    <th class="p-6 font-serif text-lg">What The Rule Looks For</th>
-                    <th class="p-6 font-serif text-lg">Example</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-outline">
-                  <tr>
-                    <td class="p-6 font-medium text-on-surface">IAS / IFRS Naming</td>
-                    <td class="p-6 text-sm text-on-surface-variant">Incorrect IAS-numbered standards written as IFRS</td>
-                    <td class="p-6 font-mono text-sm text-on-surface-variant">IFRS 37, IFRS 36, IFRS 19</td>
-                  </tr>
-                  <tr class="bg-surface-variant/30">
-                    <td class="p-6 font-medium text-on-surface">Placeholder Figures</td>
-                    <td class="p-6 text-sm text-on-surface-variant">Unsupported placeholder amounts not grounded in the source article</td>
-                    <td class="p-6 font-mono text-sm text-on-surface-variant">&euro;X, &euro;Y, $Z</td>
-                  </tr>
-                  <tr>
-                    <td class="p-6 font-medium text-on-surface">Accounting Section Completeness</td>
-                    <td class="p-6 text-sm text-on-surface-variant">Missing required sub-labels in Accounting &amp; Financial Impact</td>
-                    <td class="p-6 text-sm text-on-surface-variant">Missing IFRS/IAS Reference, P&amp;L Impact, Balance Sheet Impact, or Management Judgement</td>
-                  </tr>
-                  <tr class="bg-surface-variant/30">
-                    <td class="p-6 font-medium text-on-surface">Industry Section Completeness</td>
-                    <td class="p-6 text-sm text-on-surface-variant">Missing required sub-labels in Industry Deep-Dive</td>
-                    <td class="p-6 text-sm text-on-surface-variant">Missing Direct Linkage, Strategic Implication, or Irish Regulatory Framework</td>
-                  </tr>
-                  <tr>
-                    <td class="p-6 font-medium text-on-surface">Weak Regulatory Placeholder</td>
-                    <td class="p-6 text-sm text-on-surface-variant">Incomplete regulatory disclosure</td>
-                    <td class="p-6 font-mono text-sm text-on-surface-variant">Irish Regulatory Framework: N/A with no explanation</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
           <div class="mb-12">
             <p class="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Why Regex First?</p>
@@ -699,7 +636,6 @@ max_output_tokens = 4096</pre>
             <span class="rounded-full bg-secondary-container px-3 py-1 font-mono text-[10px] font-bold uppercase text-on-surface-variant">Inference Discipline</span>
             <span class="rounded-full bg-secondary-container px-3 py-1 font-mono text-[10px] font-bold uppercase text-on-surface-variant">Analytical Depth</span>
           </div>
-          <p class="mb-12 text-sm italic text-on-surface-variant">These dimensions were not defined upfront. They emerged from recurring failure patterns and were formalised over time.</p>
           <div class="overflow-hidden rounded-lg border border-outline bg-white">
             <table class="w-full text-left">
               <thead>
