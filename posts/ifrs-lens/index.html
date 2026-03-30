@@ -255,32 +255,156 @@
 
       <section class="px-8 py-32">
         <div class="mx-auto max-w-7xl">
-          <h2 class="mb-4 max-w-2xl font-serif text-4xl font-bold md:text-5xl">The first outputs were bad. Here is what I did about it.</h2>
-          <p class="mb-12 italic text-on-surface-variant">The first output from <b>Gemini API</b> was not good. I documented every failure, built rules to fix them, and learned when prompting alone was not enough. The prompt framework went through multiple iteration cycles with 10+ documented rule changes.</p>
-          <div class="mb-12 overflow-hidden rounded-lg border border-outline bg-white">
-            <table class="w-full text-left">
+          <h2 class="mb-4 max-w-3xl font-serif text-4xl font-bold md:text-5xl">The challenge was not generation. It was consistency.</h2>
+          <p class="mb-12 max-w-4xl italic leading-relaxed text-on-surface-variant">Gemini could generate strong IFRS-style analysis, but not at a consistently publishable standard. Repeated issues included incorrect IAS/IFRS naming, missing Irish regulatory context, placeholder figures, and incomplete accounting sections. To stabilise quality, I introduced a conditional self-assessment layer: first-draft generation, regex-based validation, and a second Gemini review only when high-risk issues were detected. This improved reliability while staying within token and API rate limits.</p>
+          <div class="mb-6">
+            <p class="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Mini Table / Visual Summary</p>
+            <div class="overflow-x-auto rounded-lg border border-outline bg-white">
+              <table class="w-full min-w-[680px] text-left">
+                <thead>
+                  <tr class="border-b border-outline bg-surface-variant">
+                    <th class="p-6 font-serif text-lg">Layer</th>
+                    <th class="p-6 font-serif text-lg">What It Does</th>
+                    <th class="p-6 font-serif text-lg">Why It Exists</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-outline">
+                  <tr>
+                    <td class="p-6 font-medium text-on-surface">1st Gemini Call</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Generates the initial IFRS case study</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Produces structured financial and regulatory analysis</td>
+                  </tr>
+                  <tr class="bg-surface-variant/30">
+                    <td class="p-6 font-medium text-on-surface">Regex-Based Validation</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Checks the draft for repeatable failure patterns</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Reduces unnecessary API calls and catches high-risk consistency issues</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 font-medium text-on-surface">2nd Gemini Call (Conditional)</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Runs only when the validator flags issues</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Improves reliability without doubling model usage on every post</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="mb-6 overflow-x-auto rounded-lg border border-outline bg-white">
+            <table class="w-full min-w-[760px] text-left">
               <thead>
                 <tr class="border-b border-outline bg-surface-variant">
-                  <th class="p-6 font-serif text-lg">Failure</th>
-                  <th class="p-6 font-serif text-lg">Fix</th>
+                  <th class="p-6 font-serif text-lg">Metric</th>
+                  <th class="p-6 font-serif text-lg">Value</th>
+                  <th class="p-6 font-serif text-lg">Note</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-outline">
-                <tr><td class="p-6 font-mono text-sm text-red-600">"IFRS 37" not "IAS 37"</td><td class="p-6">Naming convention rule</td></tr>
-                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">Irish law missing entirely</td><td class="p-6">Regulatory anchoring</td></tr>
-                <tr><td class="p-6 font-mono text-sm text-red-600">Invented figures presented as facts</td><td class="p-6">Inference discipline</td></tr>
-                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">Wrong regulator applied</td><td class="p-6">Causal link requirement</td></tr>
-                <tr><td class="p-6 font-mono text-sm text-red-600">Legal jargon misused</td><td class="p-6">Plain language rule</td></tr>
-                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">WACC in every analysis</td><td class="p-6">Application condition</td></tr>
-                <tr><td class="p-6 font-mono text-sm text-red-600">3 topics always forced</td><td class="p-6">Min/max constraint</td></tr>
-                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">Irish entities, no causal link</td><td class="p-6">Irish Context Discipline rule (RULE 3-A)</td></tr>
-                <tr><td class="p-6 font-mono text-sm text-red-600">Duplicate section output</td><td class="p-6">Post-processing layer</td></tr>
-                <tr class="bg-surface-variant/30"><td class="p-6 font-mono text-sm text-red-600">"IFRS/" rendering bug</td><td class="p-6">Regex post-processing</td></tr>
+                <tr>
+                  <td class="p-6 font-medium text-on-surface">Quality-control stages</td>
+                  <td class="p-6 font-mono text-sm text-primary">3</td>
+                  <td class="p-6 text-sm text-on-surface-variant">Generation -&gt; Validation -&gt; Conditional Review</td>
+                </tr>
+                <tr class="bg-surface-variant/30">
+                  <td class="p-6 font-medium text-on-surface">High-risk failure classes checked</td>
+                  <td class="p-6 font-mono text-sm text-primary">5</td>
+                  <td class="p-6 text-sm text-on-surface-variant">Naming, placeholders, missing accounting labels, missing regulatory labels, weak N/A explanation</td>
+                </tr>
+                <tr>
+                  <td class="p-6 font-medium text-on-surface">Default Gemini calls per post</td>
+                  <td class="p-6 font-mono text-sm text-primary">1</td>
+                  <td class="p-6 text-sm text-on-surface-variant">Clean outputs stop after the first pass</td>
+                </tr>
+                <tr class="bg-surface-variant/30">
+                  <td class="p-6 font-medium text-on-surface">Maximum Gemini calls per post</td>
+                  <td class="p-6 font-mono text-sm text-primary">2</td>
+                  <td class="p-6 text-sm text-on-surface-variant">Second pass only when flagged</td>
+                </tr>
+                <tr>
+                  <td class="p-6 font-medium text-on-surface">Request pause between Gemini calls</td>
+                  <td class="p-6 font-mono text-sm text-primary">15s</td>
+                  <td class="p-6 text-sm text-on-surface-variant">Added to stay safer under RPM constraints</td>
+                </tr>
+                <tr class="bg-surface-variant/30">
+                  <td class="p-6 font-medium text-on-surface">Self-check mode</td>
+                  <td class="p-6 font-mono text-sm text-primary">Conditional</td>
+                  <td class="p-6 text-sm text-on-surface-variant">Chosen to reduce token usage and control API cost</td>
+                </tr>
               </tbody>
             </table>
           </div>
+          <div class="mb-6">
+            <p class="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Regex-Based Validation Rules</p>
+            <div class="overflow-x-auto rounded-lg border border-outline bg-white">
+              <table class="w-full min-w-[820px] text-left">
+                <thead>
+                  <tr class="border-b border-outline bg-surface-variant">
+                    <th class="p-6 font-serif text-lg">Validation Check</th>
+                    <th class="p-6 font-serif text-lg">What The Rule Looks For</th>
+                    <th class="p-6 font-serif text-lg">Example</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-outline">
+                  <tr>
+                    <td class="p-6 font-medium text-on-surface">IAS / IFRS Naming</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Incorrect IAS-numbered standards written as IFRS</td>
+                    <td class="p-6 font-mono text-sm text-on-surface-variant">IFRS 37, IFRS 36, IFRS 19</td>
+                  </tr>
+                  <tr class="bg-surface-variant/30">
+                    <td class="p-6 font-medium text-on-surface">Placeholder Figures</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Unsupported placeholder amounts not grounded in the source article</td>
+                    <td class="p-6 font-mono text-sm text-on-surface-variant">&euro;X, &euro;Y, $Z</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 font-medium text-on-surface">Accounting Section Completeness</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Missing required sub-labels in Accounting &amp; Financial Impact</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Missing IFRS/IAS Reference, P&amp;L Impact, Balance Sheet Impact, or Management Judgement</td>
+                  </tr>
+                  <tr class="bg-surface-variant/30">
+                    <td class="p-6 font-medium text-on-surface">Industry Section Completeness</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Missing required sub-labels in Industry Deep-Dive</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Missing Direct Linkage, Strategic Implication, or Irish Regulatory Framework</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 font-medium text-on-surface">Weak Regulatory Placeholder</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Incomplete regulatory disclosure</td>
+                    <td class="p-6 font-mono text-sm text-on-surface-variant">Irish Regulatory Framework: N/A with no explanation</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
           <div class="mb-12">
-            <p class="mb-8 font-serif text-lg italic leading-relaxed text-on-surface-variant">The table above summarises what changed across iterations. Below is the prompt framework that resulted. 5 priority rules governing naming discipline, regulatory anchoring, inference boundaries, WACC application, and empty section handling.</p>
+            <p class="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Why Regex First?</p>
+            <div class="overflow-x-auto rounded-lg border border-outline bg-white">
+              <table class="w-full min-w-[640px] text-left">
+                <thead>
+                  <tr class="border-b border-outline bg-surface-variant">
+                    <th class="p-6 font-serif text-lg">Benefit</th>
+                    <th class="p-6 font-serif text-lg">Reason</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-outline">
+                  <tr>
+                    <td class="p-6 font-medium text-on-surface">Lower token cost</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Avoids a second LLM call for clean outputs</td>
+                  </tr>
+                  <tr class="bg-surface-variant/30">
+                    <td class="p-6 font-medium text-on-surface">Lower RPM pressure</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Helps operate within strict free-tier request limits</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 font-medium text-on-surface">Faster quality gate</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Deterministic checks run immediately before publication</td>
+                  </tr>
+                  <tr class="bg-surface-variant/30">
+                    <td class="p-6 font-medium text-on-surface">Targeted escalation only</td>
+                    <td class="p-6 text-sm text-on-surface-variant">Only suspicious drafts are sent to a second Gemini review</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="mb-12">
+            <p class="mb-8 font-serif text-lg italic leading-relaxed text-on-surface-variant">This shifted the system from prompt-only generation to a hybrid reliability workflow: deterministic validation first, model-based correction only when necessary. The underlying generation and self-check prompts are below.</p>
             <details class="group overflow-hidden rounded-xl border border-primary/20 bg-surface transition-all duration-300">
               <summary class="list-none cursor-pointer bg-primary px-6 py-5 text-white transition-all duration-300 hover:bg-[#1f57cf] hover:shadow-[0_14px_36px_rgba(37,99,235,0.22)]">
                 <div class="flex items-center justify-between gap-6">
