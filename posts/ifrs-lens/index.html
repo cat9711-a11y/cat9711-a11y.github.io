@@ -1,234 +1,220 @@
 ﻿<!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>IFRS Lens | Joowon Lee Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#2563EB",
-              "surface": "#F9F9F7",
-              "on-surface": "#1A2332",
-              "surface-variant": "#F0F2F5",
-              "on-surface-variant": "#3D4654",
-              "outline": "#DDE1E7",
-              "secondary-container": "#E8EAED"
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IFRS Lens | Joowon Lee Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "primary": "#2563EB",
+                  "surface": "#F9F9F7",
+                  "on-surface": "#1A2332",
+                  "surface-variant": "#F0F2F5",
+                  "on-surface-variant": "#3D4654",
+                  "outline": "#DDE1E7",
+                  "secondary-container": "#E8EAED"
+                },
+                fontFamily: {
+                  "headline": ["Newsreader", "serif"],
+                  "body": ["Inter", "sans-serif"],
+                  "mono": ["JetBrains Mono", "monospace"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              },
             },
-            fontFamily: {
-              "headline": ["Newsreader", "serif"],
-              "body": ["Inter", "sans-serif"],
-              "mono": ["JetBrains Mono", "monospace"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}
           }
-        }
-      };
-    </script>
-    <style>
-      body { font-family: "Inter", sans-serif; }
-      .font-serif { font-family: "Newsreader", serif; }
-      .font-mono { font-family: "JetBrains Mono", monospace; }
-      .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24; }
-      .hero-shell {
-        background:
-          radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 34%),
-          linear-gradient(135deg, rgba(255,255,255,0.96), rgba(240,242,245,0.96));
-      }
-      .soft-grid {
-        background-image: radial-gradient(rgba(37, 99, 235, 0.09) 1px, transparent 1px);
-        background-size: 16px 16px;
-      }
-    </style>
-  </head>
-  <body class="bg-surface text-on-surface selection:bg-secondary-container">
-    <main class="pb-24 pt-12">
-      <header class="mx-auto max-w-7xl px-6 sm:px-8">
-        <div class="hero-shell overflow-hidden rounded-[30px] border border-outline shadow-[0_24px_60px_rgba(26,35,50,0.06)]">
-          <div class="grid gap-10 p-8 md:p-12 lg:grid-cols-[1.2fr,0.8fr] lg:p-14">
-            <div>
-              <p class="mb-5 inline-flex rounded-full border border-primary/15 bg-white/80 px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-primary shadow-sm">AI-Assisted IFRS Analysis Pipeline &middot; 2026</p>
-              <h1 class="max-w-3xl font-serif text-6xl font-bold tracking-tight text-on-surface md:text-8xl">IFRS Lens</h1>
-              <p class="mt-6 max-w-3xl text-xl leading-relaxed text-on-surface-variant md:text-2xl">Connects Irish business news with IAS/IFRS standards, Irish regulatory bodies, and practical accounting judgement.</p>
-              <p class="mt-6 max-w-2xl text-base leading-8 text-on-surface-variant">Built as an MSc Accounting &amp; Analytics student project to make IFRS learning more practical while exploring how AI can support accounting research, first-draft analysis, and quality-controlled review workflows.</p>
-              <div class="mt-10 flex flex-wrap items-center gap-4">
-                <a class="flex items-center gap-2 rounded-full bg-primary px-7 py-3 font-medium text-white transition-all hover:-translate-y-0.5 hover:shadow-lg" href="https://irish-market-watch.vercel.app" rel="noopener noreferrer" target="_blank">
-                  Visit Live Site
-                  <span class="material-symbols-outlined text-sm">north_east</span>
-                </a>
-                <span class="rounded-full border border-outline bg-white/70 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-on-surface-variant">Daily workflow &middot; structured case studies &middot; conditional AI review</span>
-              </div>
-            </div>
-            <aside class="soft-grid rounded-[24px] border border-outline bg-white/80 p-7 backdrop-blur-sm">
-              <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Project Snapshot</p>
-              <div class="mt-6 space-y-5">
-                <div class="border-b border-outline/70 pb-5">
-                  <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-on-surface-variant/70">Purpose</p>
-                  <p class="mt-2 text-sm leading-7 text-on-surface-variant">Connect classroom IFRS with real Irish business events in a format that feels closer to professional accounting work.</p>
-                </div>
-                <div class="border-b border-outline/70 pb-5">
-                  <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-on-surface-variant/70">Output</p>
-                  <p class="mt-2 text-sm leading-7 text-on-surface-variant">Structured case studies covering standards, Irish regulatory context, financial statement impact, and management judgement.</p>
-                </div>
-                <div>
-                  <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-on-surface-variant/70">Review Logic</p>
-                  <p class="mt-2 text-sm leading-7 text-on-surface-variant">Hybrid quality control: regex-based validation first, second Gemini review only when high-risk issues are flagged.</p>
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </header>
-
-      <section class="mx-auto max-w-7xl px-6 py-16 sm:px-8">
-        <div class="grid gap-6 lg:grid-cols-[1.08fr,0.92fr]">
-          <article class="rounded-[24px] border border-outline bg-white p-8 shadow-sm md:p-10">
-            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Overview</p>
-            <p class="mt-5 max-w-3xl font-serif text-3xl leading-tight text-on-surface md:text-4xl">IFRS Lens is an AI-assisted IFRS analysis pipeline for Irish business news.</p>
-            <p class="mt-5 max-w-3xl text-[15px] leading-8 text-on-surface-variant">It connects daily Irish business coverage with IAS/IFRS standards, Irish regulatory bodies, and practical accounting judgement. The goal was to make IFRS study more applied while exploring how AI can support accounting research and first-draft analysis without removing the need for review.</p>
-          </article>
-          <article class="rounded-[24px] border border-outline bg-surface-variant p-8 shadow-sm md:p-10">
-            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Built For</p>
-            <p class="mt-5 font-serif text-3xl leading-tight text-on-surface md:text-[2.15rem]">Learning by testing whether the analysis is actually defensible.</p>
-            <p class="mt-5 text-[15px] leading-8 text-on-surface-variant">More than generation itself, the interesting part of the project became the review workflow: checking whether the model was accurate, relevant, and disciplined enough to support a publishable accounting note.</p>
-          </article>
-        </div>
-        <div class="mt-6 grid gap-6 md:grid-cols-2">
-          <article class="rounded-[24px] border border-outline bg-surface-variant p-8 shadow-sm md:p-10">
-            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Problem</p>
-            <p class="mt-5 text-[15px] leading-8 text-on-surface-variant">Reading Irish business news helped me understand the local business environment, but manually connecting each story to IFRS standards, regulatory context, and accounting judgement was difficult to do consistently alongside coursework. AI-generated analysis was useful, but not always reliable.</p>
-          </article>
-          <article class="rounded-[24px] border border-outline bg-white p-8 shadow-sm md:p-10">
-            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Solution</p>
-            <p class="mt-5 text-[15px] leading-8 text-on-surface-variant">I built a daily AI workflow that collects Irish business news, filters relevant articles, maps them to IFRS standards, and generates structured accounting case studies. A validation layer checks common issues such as incorrect IFRS naming, missing Irish regulatory context, placeholder figures, and incomplete accounting explanations before a second AI review is triggered.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="bg-surface-variant px-6 py-20 sm:px-8">
-        <div class="mx-auto max-w-7xl">
-          <div class="mb-10 max-w-3xl">
-            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Key Features</p>
-            <h2 class="mt-4 font-serif text-4xl font-bold text-on-surface md:text-5xl">A workflow designed for structure, not just output.</h2>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">Irish business news scraping</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Collects source material from Irish business coverage on a daily schedule.</p></article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">Relevance and materiality scoring</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Ranks stories by Irish relevance, macro significance, and likely accounting usefulness.</p></article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">IAS/IFRS standard mapping</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Links each story to the most relevant accounting standard and treatment question.</p></article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">Irish regulatory body identification</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Adds the local legal and regulatory institutions that actually shape the business event.</p></article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">AI-generated IFRS case studies</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Produces structured, publishable-style accounting notes from a first AI draft.</p></article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">Financial statement impact analysis</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Breaks the story into P&amp;L, balance sheet, and management judgement implications.</p></article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">Management judgement prompts</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Frames what a finance team or reviewer would actually need to decide.</p></article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">Regex-based validation</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Catches repeatable failure patterns cheaply before the post is published.</p></article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm"><h3 class="font-serif text-2xl font-bold text-on-surface">Conditional second AI review</h3><p class="mt-3 text-sm leading-7 text-on-surface-variant">Escalates only flagged drafts instead of doubling model usage on every article.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-6 py-20 sm:px-8">
-        <div class="grid gap-10 lg:grid-cols-[0.9fr,1.1fr]">
-          <div>
-            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">AI Workflow</p>
-            <h2 class="mt-4 font-serif text-4xl font-bold text-on-surface md:text-5xl">A hybrid workflow instead of prompting alone.</h2>
-            <p class="mt-5 max-w-xl text-[15px] leading-8 text-on-surface-variant">The pipeline became more reliable when generation, validation, and review were separated into distinct stages. The validator acts as a low-cost gate, so the second AI call only runs when there is a real reason to escalate.</p>
-            <p class="mt-6 rounded-[20px] border border-outline bg-surface-variant px-5 py-4 text-sm italic leading-7 text-on-surface-variant">This made the system more reliable while reducing unnecessary AI calls.</p>
-          </div>
-          <div class="space-y-4">
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm">
-              <div class="flex items-start gap-4">
-                <span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">01</span>
-                <div>
-                  <h3 class="font-serif text-2xl font-bold text-on-surface">Article filtering</h3>
-                  <p class="mt-2 text-sm leading-7 text-on-surface-variant">Selects relevant Irish business stories before any model call is made.</p>
-                </div>
-              </div>
-            </article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm">
-              <div class="flex items-start gap-4">
-                <span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">02</span>
-                <div>
-                  <h3 class="font-serif text-2xl font-bold text-on-surface">First AI draft</h3>
-                  <p class="mt-2 text-sm leading-7 text-on-surface-variant">Generates a structured IFRS-style case study from the selected article.</p>
-                </div>
-              </div>
-            </article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm">
-              <div class="flex items-start gap-4">
-                <span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">03</span>
-                <div>
-                  <h3 class="font-serif text-2xl font-bold text-on-surface">Regex validation</h3>
-                  <p class="mt-2 text-sm leading-7 text-on-surface-variant">Checks for repeatable quality issues such as naming errors, placeholders, and incomplete labels.</p>
-                </div>
-              </div>
-            </article>
-            <article class="rounded-[22px] border border-outline bg-white p-6 shadow-sm">
-              <div class="flex items-start gap-4">
-                <span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">04</span>
-                <div>
-                  <h3 class="font-serif text-2xl font-bold text-on-surface">Conditional AI review</h3>
-                  <p class="mt-2 text-sm leading-7 text-on-surface-variant">Runs only for flagged outputs to improve reliability without unnecessary extra API usage.</p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-surface-variant px-6 py-20 sm:px-8">
-        <div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.95fr,1.05fr]">
-          <article class="rounded-[24px] border border-outline bg-white p-8 shadow-sm md:p-10">
-            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Tech Stack</p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">FastAPI</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">Python</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">Supabase</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">Gemini 2.5 Flash</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">BeautifulSoup4</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">trafilatura</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">Jinja2</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">Tailwind CSS</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">GitHub Actions</span>
-              <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-on-surface-variant">Vercel</span>
-            </div>
-            <div class="mt-8 rounded-[20px] border border-primary/20 bg-primary px-5 py-4 text-white shadow-sm">
-              <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-white/70">Build Note</p>
-              <p class="mt-2 text-sm font-semibold leading-relaxed">Backend and frontend implemented with the assistance of Codex.</p>
-            </div>
-          </article>
-          <article class="rounded-[24px] border border-outline bg-white p-8 shadow-sm md:p-10">
-            <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Learning Outcome</p>
-            <p class="mt-5 font-serif text-3xl leading-tight text-on-surface md:text-4xl">The most valuable part was learning how to review AI, not just use it.</p>
-            <p class="mt-5 text-[15px] leading-8 text-on-surface-variant">This project helped me practise the judgement side of accounting and analytics: not just generating analysis, but designing a workflow to review, challenge, and verify AI-assisted output.</p>
-            <p class="mt-4 text-[15px] leading-8 text-on-surface-variant">It also helped me connect IFRS theory with Irish business context, regulation, automation, and the growing role of AI in accounting work.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-6 py-20 sm:px-8" id="prompt-system">
-        <div class="mb-10 max-w-3xl">
-          <p class="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-on-surface-variant/70">Prompt System</p>
-          <h2 class="mt-4 font-serif text-4xl font-bold text-on-surface md:text-5xl">The full generation and review prompts are still visible.</h2>
-          <p class="mt-5 text-[15px] leading-8 text-on-surface-variant">The detailed prompt view remains part of the page so the workflow stays inspectable. The site button above links to the live product, while the expandable panel below shows the underlying generation and self-check logic.</p>
-        </div>
-        <div class="rounded-[24px] border border-outline bg-white p-6 shadow-sm sm:p-8">
-          <details class="group overflow-hidden rounded-xl border border-primary/20 bg-surface transition-all duration-300">
-              <summary class="list-none cursor-pointer bg-primary px-6 py-5 text-white transition-all duration-300 hover:bg-[#1f57cf] hover:shadow-[0_14px_36px_rgba(37,99,235,0.22)]">
-                <div class="flex items-center justify-between gap-6">
-                  <div>
-                    <p class="mb-1 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-blue-100">Prompt System</p>
-                    <span class="font-serif text-xl font-bold">View Full Prompt Framework</span>
-                  </div>
-                  <span class="material-symbols-outlined rounded-full border border-white/30 bg-white/10 p-2 transition-transform duration-300 group-open:rotate-45">add</span>
-                </div>
-              </summary>
-              <div class="p-6 pt-0">
-                <div class="overflow-x-auto rounded-lg bg-[#1A2332] p-8">
+        </script>
+<style>
+          body { font-family: 'Inter', sans-serif; }
+          .font-serif { font-family: 'Newsreader', serif; }
+          .font-mono { font-family: 'JetBrains Mono', monospace; }
+          .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+          
+          details > summary { list-style: none; }
+          details > summary::-webkit-details-marker { display: none; }
+        </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
+<main class="pt-20">
+<header class="max-w-7xl mx-auto px-8 mb-24">
+<div class="max-w-4xl">
+<h1 class="font-serif text-7xl md:text-8xl font-bold tracking-tight text-on-surface mb-6">IFRS Lens</h1>
+<p class="font-serif text-2xl md:text-3xl italic text-on-surface-variant mb-8">AI-Assisted IFRS Analysis Pipeline &middot; 2026</p>
+<div class="flex flex-wrap gap-6 items-center mb-16">
+<a class="bg-primary text-white px-8 py-4 rounded-lg flex items-center gap-2 font-medium hover:shadow-lg transition-all" href="https://irish-market-watch.vercel.app" rel="noopener noreferrer" target="_blank">
+                    Visit Live Site 
+                    <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</header>
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="max-w-3xl">
+<h2 class="font-mono uppercase tracking-widest text-[10px] font-bold mb-6 text-primary">Overview</h2>
+<div class="space-y-6">
+<p class="font-serif text-2xl leading-relaxed text-on-surface">
+<strong class="font-bold">IFRS Lens</strong> is an AI-assisted IFRS analysis pipeline that connects Irish business news with IAS/IFRS standards, Irish regulatory bodies, and practical accounting judgement.
+                </p>
+<p class="text-on-surface-variant leading-relaxed">
+                    I built it as an MSc Accounting &amp; Analytics student to make my IFRS learning more practical while exploring how AI can support accounting research, first-draft analysis, and quality-controlled review workflows.
+                </p>
+</div>
+</div>
+</section>
+<section class="bg-surface-variant py-32 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+<div>
+<h2 class="font-serif text-4xl font-bold mb-8">Problem</h2>
+<div class="space-y-4 text-on-surface-variant leading-relaxed">
+<p>Reading Irish business news helped me understand the local business environment, but manually connecting each story to IFRS standards, regulatory context, and accounting judgement was difficult to do consistently alongside coursework.</p>
+<p>At the same time, AI-generated analysis can be useful but not always reliable. The challenge was not just producing analysis, but checking whether the output was accurate, relevant, and defensible.</p>
+</div>
+</div>
+<div>
+<h2 class="font-serif text-4xl font-bold mb-8">Solution</h2>
+<div class="space-y-4 text-on-surface-variant leading-relaxed">
+<p>I built a daily AI workflow that collects Irish business news, filters relevant articles, maps them to IFRS standards, and generates structured accounting case studies.</p>
+<p>To improve reliability, the system includes a validation layer that checks for common issues such as incorrect IFRS naming, missing Irish regulatory context, placeholder figures, and incomplete accounting explanations. A second AI review runs only when high-risk issues are detected.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 max-w-7xl mx-auto px-8">
+<h2 class="font-serif text-4xl font-bold mb-16">Key Features</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Irish business news scraping</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Relevance and materiality scoring</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">IAS/IFRS standard mapping</span>
+</li>
+</ul>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Irish regulatory body identification</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">AI-generated IFRS case studies</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Financial statement impact analysis</span>
+</li>
+</ul>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Management judgement prompts</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Regex-based validation</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Conditional second AI review</span>
+</li>
+</ul>
+</div>
+</section>
+<section class="py-32 px-8 bg-surface-variant">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-serif text-4xl font-bold mb-8">AI Workflow</h2>
+<p class="text-on-surface-variant mb-12 italic">The project uses a hybrid workflow rather than relying on prompting alone.</p>
+<div class="overflow-hidden bg-white border border-outline rounded-lg">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-variant border-b border-outline">
+<th class="p-6 font-serif text-lg font-bold">Stage</th>
+<th class="p-6 font-serif text-lg font-bold">Purpose</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline">
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">Article filtering</td>
+<td class="p-6 text-on-surface-variant">Selects relevant Irish business stories</td>
+</tr>
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">First AI draft</td>
+<td class="p-6 text-on-surface-variant">Generates structured IFRS-style analysis</td>
+</tr>
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">Regex validation</td>
+<td class="p-6 text-on-surface-variant">Checks for repeatable quality issues</td>
+</tr>
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">Conditional AI review</td>
+<td class="p-6 text-on-surface-variant">Reviews only flagged outputs before publication</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-6 text-[11px] italic text-on-surface-variant/60">This made the system more reliable while reducing unnecessary AI calls.</p>
+</div>
+</section>
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-serif text-4xl font-bold mb-8">The first outputs were bad. Here's what I did about it.</h2>
+<p class="text-on-surface-variant text-lg mb-12 max-w-3xl leading-relaxed">
+                Early versions of the pipeline suffered from hallucinated standards, missing Irish regulatory context, and inconsistent accounting structure. I documented these failures across multiple iteration cycles and kept the prompt system inspectable so the quality-control logic remained visible.
+            </p>
+<div class="overflow-hidden bg-white border border-outline rounded-lg mb-12">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-variant border-b border-outline">
+<th class="p-6 font-serif text-lg font-bold">Failure Observed</th>
+<th class="p-6 font-serif text-lg font-bold">Prompt/Workflow Fix</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline">
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">Incorrect IAS/IFRS naming</td>
+<td class="p-6 text-on-surface-variant">Naming convention rule and regex validation</td>
+</tr>
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">Missing Irish regulatory context</td>
+<td class="p-6 text-on-surface-variant">Regulatory anchoring requirement</td>
+</tr>
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">Placeholder figures in output</td>
+<td class="p-6 text-on-surface-variant">Validation layer plus conditional second-pass review</td>
+</tr>
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">Incomplete accounting sections</td>
+<td class="p-6 text-on-surface-variant">Structured section labels and self-check review</td>
+</tr>
+<tr>
+<td class="p-6 font-mono text-sm font-bold text-on-surface">Low-confidence drafts published too easily</td>
+<td class="p-6 text-on-surface-variant">Conditional escalation to a second Gemini call</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="italic text-on-surface-variant mb-12 max-w-4xl">
+                The expandable framework below preserves the actual generation and review prompts used in the project, including the second-pass self-check logic.
+            </p>
+<details class="group bg-white border border-outline rounded-lg transition-all duration-300">
+<summary class="p-6 cursor-pointer flex justify-between items-center select-none font-serif text-xl font-bold text-on-surface">
+                    View Full Prompt Framework
+                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-8 border-t border-outline">
+<div class="overflow-x-auto rounded-lg bg-[#1A2332] p-8">
                   <pre class="whitespace-pre-wrap font-mono text-sm leading-relaxed text-white"># SYSTEM_PROMPT from irish_market_watch/irish_market_watch/llm_analysis.py
 
 You are a highly sophisticated Financial Analyst and IFRS Expert based in Ireland.
@@ -495,15 +481,45 @@ temperature = 0.1
 max_output_tokens = 4096</pre>
                   </div>
                 </div>
-              </div>
-            </details>
-        </div>
-      </section>
-    </main>
-    <footer class="w-full border-t border-slate-800 bg-[#1A2332] px-8 py-12 text-white">
-      <div class="mx-auto flex max-w-7xl justify-center">
-        <p class="text-sm font-medium tracking-tight">Joowon Lee <span class="mx-2 text-slate-500">|</span> Open to Graduate opportunities in Audit &amp; Analytics</p>
-      </div>
-    </footer>
-  </body>
-</html>
+</div>
+</details>
+</div>
+</section>
+<section class="py-32 max-w-7xl mx-auto px-8">
+<div class="max-w-4xl">
+<h2 class="font-mono uppercase tracking-widest text-[10px] font-bold mb-8 text-on-surface-variant/70">Tech Stack</h2>
+<div class="flex flex-wrap gap-3">
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">FastAPI</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">Python</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">Supabase</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">Gemini 2.5 Flash</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">BeautifulSoup4</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">trafilatura</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">Jinja2</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">Tailwind CSS</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">GitHub Actions</span>
+<span class="bg-surface-variant px-4 py-2 text-sm font-mono border border-outline">Vercel</span>
+</div>
+</div>
+</section>
+<section class="py-32 px-8 bg-on-surface text-surface">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-serif text-4xl font-bold mb-12">Learning Outcome</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6 text-lg leading-relaxed text-surface/80">
+<p>This project helped me practise the judgement side of accounting and analytics: not just generating analysis, but designing a workflow to review, challenge, and verify AI-assisted output.</p>
+<p>It also helped me connect IFRS theory with Irish business context, regulation, automation, and the growing role of AI in accounting work.</p>
+</div>
+<div class="border-l border-surface/20 pl-8 py-4">
+<p class="font-serif italic text-2xl text-surface">"The human role is shifting from doing the analysis to evaluating it. This project was my attempt to practise that shift deliberately."</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#1A2332] w-full py-12 px-8 text-white border-t border-slate-800">
+<div class="max-w-7xl mx-auto flex justify-center">
+<p class="text-sm font-medium tracking-tight">Joowon Lee <span class="mx-2 text-slate-500">|</span> Open to Graduate opportunities in Audit &amp; Analytics</p>
+</div>
+</footer>
+</body></html>
